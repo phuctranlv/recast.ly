@@ -1,11 +1,14 @@
 var VideoListEntry = (props) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
-      <img className="media-object" src={props.snippet.thumbnails.default.url} alt="" />
+      {/* syntax: one object passed in as props and props has one property with the key video. props.video.snippet.thumbnails.default.url*/}
+      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title">{props.snippet.title}</div>
-      <div className="video-list-entry-detail">{props.snippet.description}</div>
+      {/* syntax: one object passed in as props and props has one property with the key video. props.video.snippet.title ADD ONCLICK HERE*/}
+      <div className="video-list-entry-title" >{props.video.snippet.title}</div>
+      {/* syntax: one object passed in as props and props has one property with the key video. props.video.snippet.description*/}
+      <div className="video-list-entry-detail">{props.video.snippet.description}</div>
     </div>
   </div>
 );
