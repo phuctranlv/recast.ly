@@ -6,7 +6,7 @@ var VideoListEntry = (props) => (
     </div>
     <div className="media-body">
       {/* syntax: one object passed in as props and props has one property with the key video. props.video.snippet.title ADD ONCLICK HERE*/}
-      <div className="video-list-entry-title" >{props.video.snippet.title}</div>
+      <div className="video-list-entry-title" onClick={() => props.click(props.video)}>{props.video.snippet.title}</div>
       {/* syntax: one object passed in as props and props has one property with the key video. props.video.snippet.description*/}
       <div className="video-list-entry-detail">{props.video.snippet.description}</div>
     </div>

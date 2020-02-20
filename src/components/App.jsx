@@ -27,17 +27,20 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
+    this.onVideoListEntryClick = this.onVideoListEntryClick.bind(this);
+
     this.videos = exampleVideoData;
-    console.log(this.videos);
+    // console.log(this.videos);
     this.state = {
       currentVideos: this.videos,
-      currentVideo: this.videos[0]
+      currentVideo: this.videos[0],
     };
   }
-  onVideoListEntryClick() {
-    console.log(this);
+  onVideoListEntryClick(video) {
+
+    console.log(video);
     this.setState({
-      currentVideo: exampleVideoData[1]
+      currentVideo: video
     });
   }
   render() {
@@ -55,7 +58,7 @@ class App extends React.Component {
             </div>
           </div>
           <div className="col-md-5">
-            <div> <VideoList videos={exampleVideoData} /> </div>
+            <div> <VideoList videos={exampleVideoData} clickEvent={this.onVideoListEntryClick} state ={this.state}/> </div>
           </div>
         </div>
       </div>

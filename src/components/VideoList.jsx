@@ -5,7 +5,7 @@ var VideoList = (props) => (
     {/* props passed in would be one object with a key called videos (passsed in from App). call map on props.videos */}
     {/* set each videoListEntry to have */}
     {props.videos.map(video =>
-      <VideoListEntry video={video}/>
+      <VideoListEntry video={video} click={props.clickEvent} state = {props.state}/>
     )}
   </div>
 );
